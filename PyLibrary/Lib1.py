@@ -4,7 +4,7 @@ import openpyxl
 
 
 def update_covid_data(cases,deaths,recovered):
-    f = openpyxl.load_workbook("C:\\Users\\vaisa\\PycharmProjects\\RFRealProject1\\Testdata\\Covid_Data.xlsx")
+    f = openpyxl.load_workbook("..\Testdata\Covid_Data.xlsx")
     sheet = f["Covid"]
     mc = sheet.max_column
     mr = int(sheet.max_row)
@@ -12,6 +12,6 @@ def update_covid_data(cases,deaths,recovered):
     sheet.cell(mr + 1, 2).value = cases
     sheet.cell(mr + 1, 3).value = deaths
     sheet.cell(mr + 1, 4).value = recovered
-    f.save("C:\\Users\\vaisa\\PycharmProjects\\RFRealProject1\\Testdata\\Covid_Data.xlsx")
+    f.save("..\Testdata\Covid_Data.xlsx")
 
 
